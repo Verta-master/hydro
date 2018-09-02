@@ -1,0 +1,38 @@
+.footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #fafafa;
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer__menu {
+  margin-top: 40px;
+}
+
+.footer__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__item {
+  margin-bottom: 30px;
+}
+
+.footer__link {
+  font-size: 13px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @yellow;
+    .transition();
+  }
+}
