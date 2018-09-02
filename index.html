@@ -31,7 +31,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="btn-call">Написать нам</a>
+      <a href="#" class="btn-call header__call">Написать нам</a>
     </div>
   </header>
   
@@ -46,21 +46,42 @@
     
     <section class="map">
       <div class="map__wrapper">
-        <div class="map__block">
-          
+        <div class="tabs" id="tabs">
+          <div class="map__info">
+            <p class="title-2">Сферы деятельности</p>
+            <div class="map__select">
+              <button type="button" class="map__btn">Выберите отрасль</button>
+              <ul class="tabs__title">
+                <li class="tabs__name"><a href="#tabs-1">Энергетика</a></li>
+                <li class="tabs__name"><a href="#tabs-2">Горнодобывающая промышленность</a></li>
+                <li class="tabs__name"><a href="#tabs-3">Химическая промышленность</a></li>
+                <li class="tabs__name"><a href="#tabs-4">ЖКХ</a></li>
+                <li class="tabs__name"><a href="#tabs-5">Металлургия</a></li>
+                <li class="tabs__name"><a href="#tabs-6">Нефтедобывающая промышленность</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs__field" id="tabs-1">
+            <!--  Map 1 is here    -->Map 1
+          </div>
+          <div class="tabs__field" id="tabs-2">
+            <!--  Map 2 is here    -->Map 2
+          </div>
+          <div class="tabs__field" id="tabs-3">
+            <!--  Map 3 is here    -->Map 3
+          </div>
+          <div class="tabs__field" id="tabs-4">
+            <!--  Map 4 is here    -->Map 4
+          </div>
+          <div class="tabs__field" id="tabs-5">
+            <!--  Map 5 is here    -->Map 5
+          </div>
+          <div class="tabs__field" id="tabs-6">
+            <!--  Map 6 is here    -->Map 6
+          </div>
         </div>
-        <div class="map__info">
-          <p class="title-2">Сферы деятельности</p>
-          <ul class="list">
-            <li>Энергетика</li>
-            <li>Горнодобывающая промышленность</li>
-            <li>Химическая промышленность</li>
-            <li>ЖКХ</li>
-            <li>Металлургия</li>
-            <li>Нефтедобывающая промышленность</li>
-          </ul>
-          <a href="#" class="btn map__btn">Обратная связь</a>
-        </div>
+        <a href="#" class="btn map__feedback">Обратная связь</a>
+        <a href="#" class="map__show">Показать на карте в отдельном окне</a>
       </div>
       <a href="#" class="more" title="Далее"></a>
     </section>
@@ -68,16 +89,18 @@
     <section class="company">
       <div class="wrapper">
         <p>Создавая нашу компанию, мы объединили многолетний опыт, накопленный в сфере проектирования, строительства и эксплуатации промышленных инженерных сооружений, и в сфере дистрибуции технологического оборудования</p>
-        <p class="company__title">График динамики оборотов компании</p>
         <figure class="company__img">
-          <img src="" alt="" width="" height="">
-          <figcaption>C 2008 года было поставлено оборудования на полтора миллиарда рублей!</figcaption>
+          <figcaption>График динамики оборотов компании</figcaption>
+          <img src="img/graph.jpg" alt="График динамики оборотов компании" width="677" height="211">
+          <span>2008 - 2017</span>
         </figure>
+        <p class="company__title">C 2008 года было поставлено оборудования на полтора миллиарда рублей!</p>
         <a href="#" class="more" title="Далее"></a>
       </div>
     </section>
     
     <section class="clients">
+      <img src="img/Bg2.jpg" alt="Наши клиенты и партнеры" class="clients__img" width="1440" height="560">
       <div class="wrapper">
         <p class="title-2">Наши клиенты и партнеры</p>
         <p>Дополнительный текст для клиентского раздела</p>
@@ -239,20 +262,19 @@
       <div class="logo">
         <img src="img/logo_black.svg" alt="Logo" width="293" height="41">
       </div>
-      <nav class="menu">
-        <button type="button" class="menu__btn"><span class="visually-hidden">Menu</span></button>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="about.html" class="menu__link">О компании</a>
+      <nav class="footer__menu">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="about.html" class="footer__link">О компании</a>
           </li>
-          <li class="menu__item">
-            <a href="activity.html" class="menu__link">Сферы деятельности</a>
+          <li class="footer__item">
+            <a href="activity.html" class="footer__link">Сферы деятельности</a>
           </li>
-          <li class="menu__item">
-            <a href="production.html" class="menu__link">Производство</a>
+          <li class="footer__item">
+            <a href="production.html" class="footer__link">Производство</a>
           </li>
-          <li class="menu__item">
-            <a href="contacts.html" class="menu__link">Контакты</a>
+          <li class="footer__item">
+            <a href="contacts.html" class="footer__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -316,5 +338,21 @@
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+    $('.map__btn').click(function(e) {
+      e.stopPropagation();
+      $('.tabs__title').slideToggle();
+    });
+    $("body").click(function(){
+      $('.tabs__title').slideUp();
+    });
+  </script>
 </body>
 </html>

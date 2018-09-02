@@ -1,0 +1,40 @@
+.menu__list {
+  display: none;
+  .reset();
+  list-style: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.menu__btn {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icon-menu-ham.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.menu--opened {
+  .menu__btn {
+    background-image: url(../img/icon-menu-cross.svg);
+  }
+}
+
+.menu__link {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  .transition();
+  
+  &:hover,
+  &:active,
+  &--active {
+    background-color: @yellow;
+    .transition();
+  }
+}

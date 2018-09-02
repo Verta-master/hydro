@@ -1,0 +1,44 @@
+.tabs__title {
+  display: none;
+  .reset();
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: solid 1px #e9eff4;
+  border-top: 0;
+  border-radius: 3px;
+}
+
+.tabs__field {
+  width: 100%;
+  min-height: 184px;
+  margin-bottom: 16px;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  iframe {
+    bottom: 0;
+    width: 100%;
+    height: 184px;
+  }
+}
+
+.tabs__name {
+  a {
+    display: block;
+    width: 100%;
+    padding: 10px 17px;
+    .transition();
+    
+    &:hover,
+    &:active {
+      background-color: @yellow;
+      .transition();
+    }
+  }
+}
