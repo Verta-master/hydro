@@ -61,6 +61,7 @@
                 <li class="tabs__name"><a href="#tabs-6">Нефтедобывающая промышленность</a></li>
               </ul>
             </div>
+            <a href="#" class="btn map__feedback">Обратная связь</a>
           </div>
           <div class="tabs__field" id="tabs-1">
             <!--  Map 1 is here    -->Map 1
@@ -81,7 +82,6 @@
             <!--  Map 6 is here    -->Map 6
           </div>
         </div>
-        <a href="#" class="btn map__feedback">Обратная связь</a>
         <a href="#" class="map__show">Показать на карте в отдельном окне</a>
       </div>
       <a href="#" class="more" title="Далее"></a>
@@ -159,8 +159,10 @@
     
     <section class="service">
       <div class="wrapper">
-        <p class="title-2">Наши услуги</p>
-        <p class="subtitle">В спектр задач Гидроинжиниринг входит помимо продвижения оборудования:</p>
+        <div class="service__head">
+          <p class="title-2">Наши услуги</p>
+          <p class="subtitle">В спектр задач Гидроинжиниринг входит помимо продвижения оборудования:</p>
+        </div>
         <ul class="service__list">
           <li class="service__item">
             <figure class="service__pic">
@@ -293,7 +295,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="btn-call">Написать нам</a>
+      <a href="#" class="btn-call footer__btn">Написать нам</a>
       <ul class="social">
         <li class="social__item">
           <a href="#">
@@ -325,7 +327,7 @@
       </ul>
     </div>
     <div class="footer__bottom">
-      <div class="wrapper">
+      <div class="wrapper footer__wrap">
         <div class="footer__block">
           <p class="footer__title">Офис</p>
           <address>г. Екатеринбург,<br>ул. Машинная 29б, оф.422 (4 этаж)</address>
@@ -353,6 +355,7 @@
   <script src="js/script.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="js/slider.js"></script>
 
   <!-- Tabs -->
   <script>
@@ -365,21 +368,6 @@
     });
     $("body").click(function(){
       $('.tabs__title').slideUp();
-    });
-  </script>
-  
-  <!-- Slider -->
-  <script>
-    var mySwiper = new Swiper ('.clients__slider', {
-      navigation: {
-        nextEl: '.clients__next',
-        prevEl: '.clients__prev',
-      },
-      simulateTouch: false,
-      preventClicks: false,
-      preventClicksPropagation: false,
-      slidesPerView: 'auto',
-      spaceBetween: 16,
     });
   </script>
 </body>
