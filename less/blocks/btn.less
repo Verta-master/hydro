@@ -10,4 +10,28 @@
   border-radius: 3px;
   background-color: #ffb300;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.18);
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: #fe9b00;
+    .transition();
+  }
+}
+
+.btn-call {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid @normal;
+  border-radius: 3px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    border-color: @yellow;
+    color: @yellow;
+    .transition();
+  }
 }

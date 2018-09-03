@@ -1,13 +1,17 @@
 .service {
-  padding-top: 48px;
-  padding-bottom: 64px;
+  padding-top: 50px;
+  padding-bottom: 5px;
   background-image: url(../img/Bg2.jpg);
-  background-position: top 250px center;
+  background-position: top 216px center;
   background-size: auto 864px;
   background-repeat: no-repeat;
   
   .more {
-    margin-bottom: 48px;
+    margin-bottom: 60px;
+  }
+  
+  .title-2 {
+    margin-bottom: 8px;
   }
 }
 
@@ -16,15 +20,17 @@
   list-style: none;
   
   &--center {
+    margin-top: 25px;
+    
     .service__item {
       flex-direction: column;
       box-shadow: none;
       border: 0;
-      padding: 12px;
-      margin-bottom: 40px;
+      padding: 12px 20px;
+      margin-bottom: 25px;
       
       p {
-        margin-top: 16px;
+        margin-top: 10px;
         width: 100%;
         text-align: center;
         font-size: 12px;
@@ -61,6 +67,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  img {
+    display: block;
+    width: 54px;
+    height: auto;
+  }
 }
 
 .service__btn {
@@ -70,10 +82,11 @@
 .service__sample {
   .reset();
   list-style: none;
+  margin-top: 50px;
 }
 
 .service__point {
-  margin-bottom: 48px;
+  margin-bottom: 60px;
   
   &:nth-child(n+3) {
     display: none;
@@ -87,6 +100,9 @@
       .service__img img {
         transform: scale(1.05);
         .transition();
+      }
+      .service__title {
+        text-decoration: underline;
       }
     }
   }

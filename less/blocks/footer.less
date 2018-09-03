@@ -10,7 +10,7 @@
 }
 
 .footer__menu {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .footer__list {
@@ -20,10 +20,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 2px;
 }
 
 .footer__item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .footer__link {
@@ -34,5 +35,51 @@
   &:active {
     color: @yellow;
     .transition();
+  }
+}
+
+.footer__top {
+  padding-bottom: 30px;
+}
+
+.footer__bottom {
+  padding-top: 50px;
+  padding-bottom: 32px;
+  text-align: center;
+  border-top: 1px solid rgba(212,212,212,0.2);
+}
+
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+.footer__block {
+  margin-bottom: 30px;
+  
+  a,
+  address {
+    font-size: 12px;
+    line-height: 1.33;
+    color: #86939e;
+  }
+  
+  span {
+    display: block;
+    font-size: 12px;
+    color: @yellow;
+  }
+  
+  .footer__mail {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: @yellow;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 }
