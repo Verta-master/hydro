@@ -1,0 +1,39 @@
+.info {
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.info__list {
+  .reset();
+  padding-left: 35px;
+  margin-bottom: 32px;
+  margin-top: 25px;
+  line-height: 1.72;
+  color: #86939e;
+}
+
+.info__link {
+  display: block;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 28px;
+  color: @yellow;
+  text-decoration: underline;
+  
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/file.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
