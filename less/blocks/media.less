@@ -208,11 +208,11 @@
     display: none;
   }
   .clients {
-    padding-top: 250px;
+    padding-top: 378px;
     padding-bottom: 50px;
     background-image: url(../img/circle2.jpg);
     background-position: top center;
-    background-size: 100% auto;
+    background-size: auto 1440px;
     background-repeat: no-repeat;
   }
   .clients__slider {
@@ -243,12 +243,16 @@
     box-shadow: none;
     border: 0;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     flex-direction: column;
     justify-content: flex-start;
     
     p {
       text-align: center;
+      width: 100%;
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   .service__pic {
@@ -293,6 +297,10 @@
   }
   .footer__block {
     width: 25%;
+    margin-bottom: 0;
+  }
+  .promo {
+    height: 100vh;
   }
 }
 
@@ -305,9 +313,12 @@
     display: inline-block;
     color: #fff;
     border-color: #fff;
+    margin-left: 20px;
   }
   .company {
-    background-image: linear-gradient(10deg, #fff 0, #fff 30%, rgba(232,232,232,0.15) 30%, rgba(232,232,232,0.15) 70%, #fff 70%, #fff 100%);
+    padding-top: 140px;
+    padding-bottom: 160px;
+    background-image: linear-gradient(17deg, #fff 0, #fff 30%, rgba(232,232,232,0.15) 30%, rgba(232,232,232,0.15) 70%, #fff 70%, #fff 100%);
   }
   .map {
     position: relative;
@@ -315,7 +326,7 @@
     .more {
       position: absolute;
       left: 50%;
-      bottom: -48px;
+      bottom: -85px;
       transform: translateX(-50%);
     }
   }
@@ -325,12 +336,9 @@
   .title-2 {
     font-size: 36px;
   }
-  .clients {
-    padding-top: 300px;
-    padding-bottom: 150px;
-  }
   .clients__slider {
     width: 100%;
+    margin-top: 65px;
   }
   .clients__item {
     width: 176px;
@@ -369,16 +377,22 @@
   .social {
     position: absolute;
     padding-top: 0;
-    top: 130%;
+    top: 140%;
     right: 24px;
+  }
+  .social__item {
+    margin-left: 7px;
   }
   .footer__top {
     position: relative;
-    
+    padding-bottom: 20px;
+  }
+  .footer__bottom {
+    padding-top: 30px;
   }
   .footer__btn {
     margin-right: 0;
-    margin-left: 72px;
+    margin-left: 20px;
   }
   .footer__menu,
   .footer .logo {
@@ -386,5 +400,100 @@
   }
   .footer__menu {
     width: auto;
+  }
+  .header {
+    padding-top: 50px;
+  }
+  .promo {
+    padding-top: 215px;
+  }
+  .promo__title {
+    margin-bottom: 35px;
+  }
+  .map__info {
+    padding-top: 90px;
+    padding-left: 55px;
+    
+    .title-2 {
+      font-size: 24px;
+      margin-bottom: 47px;
+    }
+  }
+  .tabs__name {
+    margin-bottom: 24px;
+    
+    a {
+      padding-left: 32px;
+    }
+  }
+  .map__select {
+    margin-bottom: 60px;
+  }
+  .company__img {
+    max-width: 630px;
+    margin-top: 50px;
+    margin-bottom: 65px;
+    
+    figcaption {
+      margin-bottom: 50px;
+      font-size: 24px;
+    }
+    
+    span {
+      display: none;
+    }
+  }
+  .company .more {
+    margin-top: 75px;
+  }
+  .clients {
+    padding-bottom: 175px;
+    
+    p {
+      font-size: 24px;
+    }
+    
+    .title-2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    .clients__item p {
+      font-size: 14px;
+    }
+  }
+  .clients__item {
+    padding: 16px;
+  }
+  .clients__logo {
+    height: 80px;
+  }
+  .clients__slider {
+    margin-bottom: 15px;
+  }
+  .clients__btn {
+    margin-bottom: 65px;
+  }
+  .service .more {
+    margin-top: -30px;
+    margin-bottom: 80px;
+  }
+  .service__list--center {
+    margin-top: 50px;
+  }
+  .service__list--center .service__item p {
+    margin-top: 0;
+  }
+  .service__sample {
+    margin-top: 145px;
+  }
+  .service__point {
+    margin-bottom: 35px;
+  }
+  .service {
+    padding-bottom: 0;
+  }
+  .footer {
+    padding-top: 55px;
+    padding-bottom: 20px;
   }
 }
