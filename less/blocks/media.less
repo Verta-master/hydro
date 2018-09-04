@@ -30,6 +30,9 @@
     width: 50%;
     text-align: left;
   }
+  .article iframe {
+    height: 300px;
+  }
 }
 
 //-----------------------------
@@ -70,6 +73,21 @@
   }
   .info__btn {
     margin-left: 0;
+  }
+  .info__link--article {
+    display: block;
+  }
+  .about--article .info__btn {
+    display: flex;
+  }
+  .about--article {
+    padding-bottom: 60px;
+  }
+  .article iframe {
+    height: 400px;
+  }
+  .info__btn--article {
+    display: none;
   }
 }
 
@@ -331,6 +349,9 @@
   .info__list {
     max-width: 800px;
   }
+  .article iframe {
+    height: 600px;
+  }
 }
 
 //-----------------------------
@@ -526,11 +547,11 @@
     padding-bottom: 20px;
   }
   .about {
-    padding-top: 215px;
+    padding-top: 225px;
     padding-bottom: 60px;
   }
   .title {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   .about__info {
     margin-top: 0;
@@ -538,5 +559,71 @@
   .info {
     padding-top: 55px;
     padding-bottom: 35px;
+  }
+  .about--article {
+    padding-top: 170px;
+    padding-bottom: 290px;
+    
+    .title {
+      margin-bottom: 15px;
+      max-width: 100%;
+    }
+    .about__info {
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
+  }
+  .breadcrumbs {
+    margin-bottom: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  a.breadcrumbs__link {
+    margin-right: 15px;
+    position: relative;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1;
+    text-decoration: underline;
+    
+    &::after {
+      content: "-";
+      position: absolute;
+      top: 0;
+      right: -10px;
+    }
+    
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+  .article {
+    margin-top: -275px;
+    position: relative;
+    z-index: 2;
+  }
+  .article__block {
+    margin-bottom: 16px;
+    padding: 48px 104px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  .article iframe {
+    height: 480px;
+    margin-bottom: 0;
+  }
+  .article__description p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .article__title {
+    font-weight: 500;
+  }
+  .article__links {
+    margin-bottom: 75px;
   }
 }
