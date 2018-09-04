@@ -614,10 +614,11 @@ address {
   font-weight: 300;
 }
 .title {
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
   color: #fff;
-  line-height: 2;
+  line-height: 1.33;
   letter-spacing: -0.2px;
 }
 .title-3 {
@@ -1160,7 +1161,7 @@ address {
 .about {
   position: relative;
   z-index: 2;
-  padding-top: 80px;
+  padding-top: 90px;
   padding-bottom: 48px;
   color: #fff;
   background-color: #000;
@@ -1178,6 +1179,15 @@ address {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.about--article {
+  padding-top: 75px;
+  padding-bottom: 35px;
+  background-image: url(../img/BG5.jpg);
+}
+.about--article::before,
+.about--article .info__btn {
+  display: none;
 }
 .about__info {
   font-size: 14px;
@@ -1221,6 +1231,54 @@ address {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.info__link--article {
+  display: none;
+}
+.breadcrumbs {
+  display: none;
+}
+.article {
+  padding-top: 48px;
+  padding-bottom: 34px;
+}
+.article iframe {
+  display: block;
+  margin-bottom: 33px;
+  border: 0;
+  width: 100%;
+}
+.article .info__link {
+  margin-bottom: 5px;
+}
+.article__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.78;
+  letter-spacing: -0.2px;
+}
+.article__links {
+  margin-bottom: 60px;
+}
+.article__description p {
+  font-size: 12px;
+  line-height: 2;
+}
+.article__text a {
+  color: #ffb300;
+  text-decoration: underline;
+}
+.article__text a:hover,
+.article__text a:active {
+  text-decoration: none;
+}
+.article__text p {
+  margin-bottom: 24px;
+  color: #000;
+}
+.article__points {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
 @media (min-width: 482px) {
   .wrapper {
     width: 100%;
@@ -1259,6 +1317,9 @@ address {
   .footer__block {
     width: 50%;
     text-align: left;
+  }
+  .article iframe {
+    height: 300px;
   }
 }
 @media (min-width: 700px) {
@@ -1303,6 +1364,23 @@ address {
   }
   .info__btn {
     margin-left: 0;
+  }
+  .info__link--article {
+    display: block;
+  }
+  .about--article .info__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about--article {
+    padding-bottom: 60px;
+  }
+  .article iframe {
+    height: 400px;
+  }
+  .info__btn--article {
+    display: none;
   }
 }
 @media (min-width: 1000px) {
@@ -1610,6 +1688,9 @@ address {
   .info__list {
     max-width: 800px;
   }
+  .article iframe {
+    height: 600px;
+  }
 }
 @media (min-width: 1230px) {
   .wrapper {
@@ -1799,11 +1880,11 @@ address {
     padding-bottom: 20px;
   }
   .about {
-    padding-top: 215px;
+    padding-top: 225px;
     padding-bottom: 60px;
   }
   .title {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   .about__info {
     margin-top: 0;
@@ -1811,5 +1892,76 @@ address {
   .info {
     padding-top: 55px;
     padding-bottom: 35px;
+  }
+  .about--article {
+    padding-top: 170px;
+    padding-bottom: 290px;
+  }
+  .about--article .title {
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+  .about--article .about__info {
+    margin-bottom: 35px;
+    max-width: 100%;
+  }
+  .breadcrumbs {
+    margin-bottom: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  a.breadcrumbs__link {
+    margin-right: 15px;
+    position: relative;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1;
+    text-decoration: underline;
+  }
+  a.breadcrumbs__link::after {
+    content: "-";
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+  a.breadcrumbs__link:hover,
+  a.breadcrumbs__link:active {
+    text-decoration: none;
+  }
+  .article {
+    margin-top: -275px;
+    position: relative;
+    z-index: 2;
+  }
+  .article__block {
+    margin-bottom: 16px;
+    padding: 48px 104px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  .article iframe {
+    height: 480px;
+    margin-bottom: 0;
+  }
+  .article__description p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .article__title {
+    font-weight: 500;
+  }
+  .article__links {
+    margin-bottom: 75px;
   }
 }
