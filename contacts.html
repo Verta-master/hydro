@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Гидроинжиниринг</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <a href="index.html" class="logo">
+        <img src="img/logo_white.svg" alt="Logo" width="293" height="41">
+      </a>
+      <nav class="menu">
+        <button type="button" class="menu__btn"><span class="visually-hidden">Menu</span></button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="about.html" class="menu__link">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="activity.html" class="menu__link">Сферы деятельности</a>
+          </li>
+          <li class="menu__item">
+            <a href="production.html" class="menu__link">Производство</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--active">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a data-fancybox data-src="#call" href="javascript:;" class="btn-call header__call">Написать нам</a>
+    </div>
+  </header>
+  
+  <main>
+    <section class="about about--contacts">
+      <div class="wrapper">
+        <nav class="breadcrumbs">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__link">Контакты</span>
+        </nav>
+        
+        <h1 class="title">Контактная информация</h1>
+        <p class="about__info">Компания «Гидроинжиниринг» ведет успешную деятельность с 15 декабря 2008 года. Создавая нашу компанию, мы объединили многолетний опыт, накопленный в сфере проектирования, строительства и эксплуатации промышленных инженерных сооружений и в сфере дистрибуции технологического оборудования</p>
+        <a href="#" class="btn info__btn">Заполнить опросный лист</a>
+      </div>
+    </section>
+    
+    <section class="activity activity--contacts wrapper">
+      <div class="tabs" id="tabs">
+        <div class="map__info">
+          <ul class="tabs__selection">
+            <li class="tabs__point"><a href="#tabs-1">Офис</a></li>
+            <li class="tabs__point"><a href="#tabs-2">Склад</a></li>
+          </ul>
+        </div>
+        <div class="tabs__info" id="tabs-1">
+          <div class="tabs__map">
+            <!--  Map 1 is here    -->Map 1
+          </div>
+          <div class="tabs__address">
+            <a href="#" class="map__show">Показать на карте в отдельном окне</a>
+            <address>
+              Адрес:<br>г. Екатеринбург, ул. Машинная 29Б, оф. 422 (4 этаж)
+            </address>
+            <p>Телефон:<br><a href="tel:+73433101606">+7(343) 310-16-06</a>, <a href="tel:+73433177191">+7(343) 317-71-91(многоканальный)</a></p>
+            <p>Электронная почта:<br><a href="mailto:gydroi@yandex.ru" class="link">gydroi@yandex.ru</a></p>
+            <a href="#" class="info__link" download>Скачать карточку предприятия</a>
+            <a href="#" class="btn tabs__btn">Написать нам</a>
+          </div>
+        </div>
+        <div class="tabs__info" id="tabs-2">
+          <div class="tabs__map">
+            <!--  Map 2 is here    -->Map 2
+          </div>
+          <div class="tabs__address">
+            <a href="#" class="map__show">Показать на карте в отдельном окне</a>
+            <address>
+              Адрес склада
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="contacts wrapper">
+      <div class="contacts__block">
+        <p class="contacts__title">Реквизиты</p>
+        <p>Общество с ограниченной ответственностью «ГИДРОинжиниринг»
+          <br><br>
+          ИНН 6670238747 КПП 667201001 ОГРН 1086670042612<br>
+          ОКПО 89889549<br>
+          Р/с 40702810522560001043 в АКБ «Абсолют Банк» (ПАО)<br>
+          в г. Екатеринбурге,<br>
+          БИК 046577921<br>
+          К/счет 30101810800000000921 в Уральском главном управлении Центрального банка Российской Федерации
+          <br><br>
+          Адрес: 620142, Россия, Екатеринбург, ул. Машинная, 29Б, оф. 422<br>
+          Телефон: +7(343) 310-16-06 (многоканальный)
+          <br><br>
+          Электропочта: <a href="mailto:gydroi@yandex.ru" class="link">gydroi@yandex.ru</a></p>
+      </div>
+      <div class="contacts__block">
+        <p class="contacts__title">Обратная связь</p>
+        <form action="#" method="post" class="contacts__form">
+          <label for="mail" class="contacts__label">Ваш E-mail</label>
+          <input type="email" name="mail" id="mail" class="contacts__input" placeholder="test@test.mail">
+          <label for="subject" class="contacts__label">Тема сообщения</label>
+          <input type="text" name="subject" id="subject" class="contacts__input" placeholder="Купить маслостанцию">
+          <label for="message" class="contacts__label">Текст сообщения</label>
+          <input type="text" name="message" id="message" class="contacts__message">
+          <button type="submit" class="btn contacts__btn">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper footer__top">
+      <div class="logo">
+        <img src="img/logo_black.svg" alt="Logo" width="293" height="41">
+      </div>
+      <nav class="footer__menu">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="about.html" class="footer__link">О компании</a>
+          </li>
+          <li class="footer__item">
+            <a href="activity.html" class="footer__link">Сферы деятельности</a>
+          </li>
+          <li class="footer__item">
+            <a href="production.html" class="footer__link">Производство</a>
+          </li>
+          <li class="footer__item">
+            <a href="contacts.html" class="footer__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a data-fancybox data-src="#call" href="javascript:;" class="btn-call footer__btn">Написать нам</a>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M10.706 9.374v1.18h-.849v1.443h.85v4.289h1.744v-4.288h1.17s.11-.692.163-1.449h-1.327v-.987c0-.147.19-.345.378-.345h.95V7.714h-1.291c-1.83 0-1.788 1.445-1.788 1.66z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M16.091 9.363a3.299 3.299 0 0 1-.414.147 1.78 1.78 0 0 0 .373-.64.133.133 0 0 0-.046-.148.14.14 0 0 0-.156-.01c-.3.174-.625.3-.965.372a1.872 1.872 0 0 0-1.288-.513c-1.014 0-1.84.807-1.84 1.798 0 .078.005.156.015.233a4.745 4.745 0 0 1-3.233-1.676.14.14 0 0 0-.226.017 1.766 1.766 0 0 0 .188 2.07 1.577 1.577 0 0 1-.246-.108.141.141 0 0 0-.136 0 .135.135 0 0 0-.07.115v.024c0 .647.357 1.229.901 1.546a1.621 1.621 0 0 1-.14-.02.14.14 0 0 0-.13.043.133.133 0 0 0-.027.131c.201.615.72 1.067 1.348 1.205a3.312 3.312 0 0 1-2.13.463.139.139 0 0 0-.147.089.134.134 0 0 0 .056.16c.802.502 1.73.768 2.683.768 1.874 0 3.046-.864 3.699-1.588.814-.903 1.281-2.098 1.281-3.279 0-.05 0-.099-.002-.149a3.53 3.53 0 0 0 .823-.852.133.133 0 0 0-.009-.162.14.14 0 0 0-.162-.036z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M7.437 12.478l1.975.716.765 2.39c.049.152.241.209.369.107l1.1-.872a.336.336 0 0 1 .401-.01l1.986 1.4c.137.097.33.024.364-.136l1.455-6.8c.038-.176-.14-.322-.312-.257l-8.105 3.038c-.2.075-.198.35.002.424zm2.616.335l3.86-2.31c.07-.042.141.05.082.103l-3.186 2.878a.636.636 0 0 0-.205.384l-.108.781c-.015.104-.165.115-.195.014l-.417-1.425a.373.373 0 0 1 .17-.425z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper footer__wrap">
+        <div class="footer__block">
+          <p class="footer__title">Офис</p>
+          <address>г. Екатеринбург,<br>ул. Машинная 29б, оф.422 (4 этаж)</address>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Склад:</p>
+          <address>г. Екатеринбург,<br>ул. Цвиллинга, д. 7, здание №6</address>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Телефоны:</p>
+          <a href="tel:+73433101606" class="footer__phone">+7 (343) 310-16-06 / </a>
+          <a href="tel:+73433177191" class="footer__phone">+7 (343) 317-71-91</a>
+          <span>Мы вам перезвоним</span>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Электронная почта:</p>
+          <a href="mailto:info@hydroi.ru" class="footer__mail">info@hydroi.ru</a>
+          <a href="mailto:gydroi@yandex.ru" class="footer__mail">gydroi@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-2">Написать нам</p>
+    <form action="#" method="post" class="modal__form">
+      <input type="text" class="modal__input" placeholder="Имя">
+      <input type="email" class="modal__input" placeholder="E-mail">
+      <textarea class="modal__text" placeholder="Сообщение"></textarea>
+      <button type="submit" class="btn modal__btn">Отправить</button>
+    </form>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+</body>
+</html>

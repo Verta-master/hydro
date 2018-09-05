@@ -451,6 +451,14 @@ address {
   padding-left: 24px;
   padding-right: 24px;
 }
+.link {
+  color: #ffb300;
+  text-decoration: underline;
+}
+.link:hover,
+.link:active {
+  text-decoration: none;
+}
 .btn {
   width: 100%;
   height: 48px;
@@ -696,6 +704,7 @@ address {
   background-size: contain;
 }
 .tabs {
+  position: relative;
   background-color: #fff;
 }
 .tabs__title {
@@ -713,6 +722,9 @@ address {
   border-top: 0;
   border-radius: 3px;
 }
+.tabs__title .ui-tabs-active {
+  color: #ffb300;
+}
 .tabs__field {
   width: 100%;
   min-height: 184px;
@@ -723,11 +735,13 @@ address {
   background-size: cover;
 }
 .tabs__field iframe {
+  display: block;
   bottom: 0;
   width: 100%;
-  height: 184px;
+  height: 100%;
 }
 .tabs__name a {
+  outline: none;
   display: block;
   width: 100%;
   padding: 10px 17px;
@@ -739,6 +753,66 @@ address {
   background-color: #ffb300;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.tabs__point {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.tabs__point a {
+  outline: none;
+  font-size: 18px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.tabs__point a:hover,
+.tabs__point a:active {
+  color: #ffb300;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.tabs__selection {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+.tabs__selection .ui-tabs-active {
+  color: #ffb300;
+  text-decoration: underline;
+}
+.tabs__map {
+  width: 100%;
+  height: 184px;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.tabs__map iframe {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.tabs__address {
+  color: #000;
+}
+.tabs__address .map__show {
+  margin-bottom: 40px;
+}
+.tabs__address address {
+  margin-bottom: 25px;
 }
 .company {
   padding-top: 35px;
@@ -1206,6 +1280,15 @@ address {
 .about--activity::before {
   display: none;
 }
+.about--contacts {
+  padding-top: 75px;
+  padding-bottom: 35px;
+  background-image: url(../img/BG6.jpg);
+}
+.about--contacts::before,
+.about--contacts .info__btn {
+  display: none;
+}
 .about__info {
   font-size: 14px;
   font-weight: 500;
@@ -1416,6 +1499,64 @@ address {
 .activity__company {
   margin: 0;
   font-size: 12px;
+}
+.contacts {
+  padding-top: 20px;
+  color: #000;
+}
+.contacts__title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.contacts__block {
+  margin-bottom: 75px;
+}
+.contacts__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contacts__message,
+.contacts__input {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #dbdbdb;
+}
+.contacts__message::-webkit-input-placeholder,
+.contacts__input::-webkit-input-placeholder {
+  color: #697b8c;
+  opacity: 1;
+}
+.contacts__message:-ms-input-placeholder,
+.contacts__input:-ms-input-placeholder {
+  color: #697b8c;
+  opacity: 1;
+}
+.contacts__message::-ms-input-placeholder,
+.contacts__input::-ms-input-placeholder {
+  color: #697b8c;
+  opacity: 1;
+}
+.contacts__message::placeholder,
+.contacts__input::placeholder {
+  color: #697b8c;
+  opacity: 1;
+}
+.contacts__input {
+  padding: 0 16px;
+  height: 50px;
+}
+.contacts__message {
+  padding: 16px;
+  height: 144px;
+  min-height: 144px;
 }
 @media (min-width: 482px) {
   .wrapper {
@@ -1936,6 +2077,63 @@ address {
   .activity__list {
     margin-top: 0;
   }
+  .about--contacts .info__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about--contacts {
+    padding-bottom: 250px;
+  }
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contacts__block {
+    width: 45%;
+  }
+  .contacts__title {
+    font-size: 24px;
+  }
+  .contacts__btn {
+    width: 160px;
+    margin-right: 0;
+  }
+  .tabs__info {
+    width: 50%;
+    height: 480px;
+  }
+  .tabs__info .tabs__map {
+    height: 100%;
+  }
+  .tabs__address {
+    position: absolute;
+    top: 130px;
+    left: calc(50% + 55px);
+  }
+  .tabs__selection {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .tabs__point {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+  .tabs__point a {
+    font-size: 24px;
+  }
+  .tabs__btn {
+    width: 160px;
+    margin-left: 0;
+  }
 }
 @media (min-width: 1230px) {
   .wrapper {
@@ -2257,6 +2455,10 @@ address {
   .activity {
     margin-top: -285px;
   }
+  .activity--contacts {
+    margin-top: -220px;
+    padding-bottom: 5px;
+  }
   .tabs__field {
     height: 480px;
   }
@@ -2271,5 +2473,19 @@ address {
   .activity__item {
     padding-top: 8px;
     padding-bottom: 8px;
+  }
+  .about--contacts {
+    padding-top: 175px;
+    padding-bottom: 285px;
+  }
+  .about--contacts .about__info {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+  .about--contacts .title {
+    margin-bottom: 10px;
+  }
+  .contacts__title {
+    margin-bottom: 35px;
   }
 }
