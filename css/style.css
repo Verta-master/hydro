@@ -486,6 +486,7 @@ address {
   font-weight: 500;
   border: 1px solid #4a4a4a;
   border-radius: 3px;
+  outline: none;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
@@ -1189,6 +1190,13 @@ address {
 .about--article .info__btn {
   display: none;
 }
+.about--production {
+  background-image: url(../img/BG4.jpg);
+}
+.about--production::before,
+.about--production .info__btn {
+  display: none;
+}
 .about__info {
   font-size: 14px;
   font-weight: 500;
@@ -1279,6 +1287,90 @@ address {
   margin-top: 25px;
   margin-bottom: 30px;
 }
+.modal {
+  max-width: 300px;
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.modal .title {
+  color: #4a4a4a;
+}
+.modal__form {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal__text,
+.modal__input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+}
+.modal__input {
+  height: 40px;
+  padding: 0 15px;
+}
+.modal__text {
+  height: 150px;
+  min-height: 150px;
+  padding: 15px;
+}
+.production {
+  padding-top: 50px;
+  padding-bottom: 48px;
+}
+.production__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.production__item {
+  margin-bottom: 55px;
+}
+.production__item:nth-child(n+3) {
+  display: none;
+}
+.production__img {
+  width: 100%;
+  height: 190px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.production__img a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.production__img img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.production__info p {
+  font-size: 12px;
+  line-height: 1.35;
+}
+.production__info .production__title {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+}
+.production__link {
+  display: none;
+}
 @media (min-width: 482px) {
   .wrapper {
     width: 100%;
@@ -1320,6 +1412,12 @@ address {
   }
   .article iframe {
     height: 300px;
+  }
+  .production__img {
+    width: 384px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (min-width: 700px) {
@@ -1381,6 +1479,61 @@ address {
   }
   .info__btn--article {
     display: none;
+  }
+  .production__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .production__info {
+    width: 50%;
+    padding-left: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .production__info .production__title {
+    margin-top: 0;
+  }
+  .production__img {
+    max-width: 50%;
+  }
+  .production__link {
+    display: block;
+    margin-top: auto;
+    color: #ffb300;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  .production .info__btn {
+    display: none;
+  }
+  .about--production .info__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 25px;
+  }
+  .production__item:nth-child(n+3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media (min-width: 1000px) {
@@ -1962,6 +2115,41 @@ address {
     font-weight: 500;
   }
   .article__links {
+    margin-bottom: 75px;
+  }
+  .about--production .about__info {
+    max-width: 100%;
+  }
+  .production__img {
+    margin: 0;
+  }
+  .production__info {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .production__info p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .production__info .production__title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .about--production {
+    padding-top: 170px;
+    padding-bottom: 80px;
+  }
+  .about--production .title {
+    margin-bottom: 15px;
+  }
+  .about--production .info__btn {
+    margin-top: 35px;
+  }
+  .production {
+    padding-top: 95px;
+  }
+  .production__item {
     margin-bottom: 75px;
   }
 }
