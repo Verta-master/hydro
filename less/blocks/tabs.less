@@ -1,4 +1,5 @@
 .tabs {
+  position: relative;
   background-color: #fff;
 }
 
@@ -38,8 +39,9 @@
   }
 }
 
-.tabs__name {
+.tabs__name {  
   a {
+    outline: none;
     display: block;
     width: 100%;
     padding: 10px 17px;
@@ -58,6 +60,7 @@
   margin-right: 20px;
   
   a {
+    outline: none;
     font-size: 18px;
     .transition();
     
@@ -102,4 +105,12 @@
 
 .tabs__address {
   color: #000;
+  
+  .map__show {
+    margin-bottom: 40px;
+  }
+  
+  address {
+    margin-bottom: 25px;
+  }
 }
