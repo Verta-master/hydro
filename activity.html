@@ -22,10 +22,10 @@
             <a href="about.html" class="menu__link">О компании</a>
           </li>
           <li class="menu__item">
-            <a href="activity.html" class="menu__link">Сферы деятельности</a>
+            <a class="menu__link menu__link--active">Сферы деятельности</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link menu__link--active">Производство</a>
+            <a href="production.html" class="menu__link">Производство</a>
           </li>
           <li class="menu__item">
             <a href="contacts.html" class="menu__link">Контакты</a>
@@ -37,68 +37,106 @@
   </header>
   
   <main>
-    <section class="about about--production">
+    <section class="about about--activity">
       <div class="wrapper">
         <nav class="breadcrumbs">
           <a href="#" class="breadcrumbs__link">Главная</a>
-          <span class="breadcrumbs__link">Производство</span>
+          <span class="breadcrumbs__link">Сферы деятельности</span>
         </nav>
         
-        <h1 class="title">Производство</h1>
+        <h1 class="title">Сферы деятельности</h1>
         <p class="about__info">Компания «Гидроинжиниринг» ведет успешную деятельность с 15 декабря 2008 года. Создавая нашу компанию, мы объединили многолетний опыт, накопленный в сфере проектирования, строительства и эксплуатации промышленных инженерных сооружений и в сфере дистрибуции технологического оборудования</p>
-        <a href="#" class="btn info__btn">Заполнить опросный лист</a>
       </div>
     </section>
     
-    <section class="production wrapper">
-      <ul class="production__list">
-        <li class="production__item">
-          <figure class="production__img">
-            <a href="#">
-              <img src="img/BG3.jpg" alt="Маслостанция" width="1440" height="848">
-            </a>
-          </figure>
-          <div class="production__info">
-            <p class="production__title"><a href="#">Маслостанция МС-К-2-14</a></p>
-            <p>Маслостанция МС-К-2-14 производства «ГИДРОинжиниринг» с полупогружным центробежным насосом MTR («Grundfos») предназначена для обеспечения качественной и долговечной работы подшипников гидравлической части основных напорных насосов ЦНС240-1900, используемых на ППД.</p>
-            <a href="#" class="production__link">Подробнее</a>
+    <section class="activity wrapper">
+      <div class="tabs" id="tabs">
+        <div class="map__info">
+          <p class="title-2">Сферы деятельности</p>
+          <div class="map__select">
+            <button type="button" class="map__btn">Выберите отрасль</button>
+            <ul class="tabs__title">
+              <li class="tabs__name"><a href="#tabs-1">Энергетика</a></li>
+              <li class="tabs__name"><a href="#tabs-2">Горнодобывающая промышленность</a></li>
+              <li class="tabs__name"><a href="#tabs-3">Химическая промышленность</a></li>
+              <li class="tabs__name"><a href="#tabs-4">ЖКХ</a></li>
+              <li class="tabs__name"><a href="#tabs-5">Металлургия</a></li>
+              <li class="tabs__name"><a href="#tabs-6">Нефтедобывающая промышленность</a></li>
+            </ul>
           </div>
+        </div>
+        <div class="tabs__field" id="tabs-1">
+          <!--  Map 1 is here    -->Map 1
+        </div>
+        <div class="tabs__field" id="tabs-2">
+          <!--  Map 2 is here    -->Map 2
+        </div>
+        <div class="tabs__field" id="tabs-3">
+          <!--  Map 3 is here    -->Map 3
+        </div>
+        <div class="tabs__field" id="tabs-4">
+          <!--  Map 4 is here    -->Map 4
+        </div>
+        <div class="tabs__field" id="tabs-5">
+          <!--  Map 5 is here    -->Map 5
+        </div>
+        <div class="tabs__field" id="tabs-6">
+          <!--  Map 6 is here    -->Map 6
+        </div>
+      </div>
+      <a href="#" class="map__show">Показать на карте в отдельном окне</a>
+
+      <p class="activity__title">Список предприятий отрасли</p>
+      <ul class="activity__list">
+        <li class="activity__item">
+          <p class="activity__city">г. Ноябрьск</p>
+          <p class="activity__place">Ноябрьская ПГЭ</p>
+          <p class="activity__company">ЗАО «Интертехэлектро»</p>
         </li>
-        <li class="production__item">
-          <figure class="production__img">
-            <a href="#">
-              <img src="img/Bg2.jpg" alt="Насос с гидрозатворной системой" width="1440" height="560">
-            </a>
-          </figure>
-          <div class="production__info">
-            <p class="production__title"><a href="#">Насос с гидрозатворной системой</a></p>
-            <p>Компания ООО «ГИДРОинжиниринг» совместно с компанией Grundfos (Дания) на основании опыта эксплуатации подпорных насосных агрегатов CRN 150-6 75kWt IP55 PN40 X-F-G-K- HQQK на месторождениях ООО «РН-Юганскнефтегаз» с целью оптимизации технических регламентов обслуживания и увеличения межремонтного срока эксплуатации провело модернизацию указанной модели насосного агрегата</p>
-            <a href="#" class="production__link">Подробнее</a>
-          </div>
+        <li class="activity__item">
+          <p class="activity__city">г. Сургут</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель Филиал ЗАО «Интертехэлектро»г.Сургут</p>
         </li>
-        <li class="production__item">
-          <figure class="production__img">
-            <a href="#">
-              <img src="img/BG3.jpg" alt="Маслостанция" width="1440" height="848">
-            </a>
-          </figure>
-          <div class="production__info">
-            <p class="production__title"><a href="#">Маслостанция МС-К-2-14</a></p>
-            <p>Маслостанция МС-К-2-14 производства «ГИДРОинжиниринг» с полупогружным центробежным насосом MTR («Grundfos») предназначена для обеспечения качественной и долговечной работы подшипников гидравлической части основных напорных насосов ЦНС240-1900, используемых на ППД.</p>
-            <a href="#" class="production__link">Подробнее</a>
-          </div>
+        <li class="activity__item">
+          <p class="activity__city">г. Нефтеюганск</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель ООО «ЮНГ-Сервис»</p>
         </li>
-        <li class="production__item">
-          <figure class="production__img">
-            <a href="#">
-              <img src="img/Bg2.jpg" alt="Насос с гидрозатворной системой" width="1440" height="560">
-            </a>
-          </figure>
-          <div class="production__info">
-            <p class="production__title"><a href="#">Насос с гидрозатворной системой</a></p>
-            <p>Компания ООО «ГИДРОинжиниринг» совместно с компанией Grundfos (Дания) на основании опыта эксплуатации подпорных насосных агрегатов CRN 150-6 75kWt IP55 PN40 X-F-G-K- HQQK на месторождениях ООО «РН-Юганскнефтегаз» с целью оптимизации технических регламентов обслуживания и увеличения межремонтного срока эксплуатации провело модернизацию указанной модели насосного агрегата</p>
-            <a href="#" class="production__link">Подробнее</a>
-          </div>
+        <li class="activity__item">
+          <p class="activity__city">г. Ноябрьск</p>
+          <p class="activity__place">Ноябрьская ПГЭ</p>
+          <p class="activity__company">ЗАО «Интертехэлектро»</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Сургут</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель Филиал ЗАО «Интертехэлектро»г.Сургут</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Нефтеюганск</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель ООО «ЮНГ-Сервис»</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Ноябрьск</p>
+          <p class="activity__place">Ноябрьская ПГЭ</p>
+          <p class="activity__company">ЗАО «Интертехэлектро»</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Сургут</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель Филиал ЗАО «Интертехэлектро»г.Сургут</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Нефтеюганск</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель ООО «ЮНГ-Сервис»</p>
+        </li>
+        <li class="activity__item">
+          <p class="activity__city">г. Сургут</p>
+          <p class="activity__place">Левобережная часть Приобского месторождения</p>
+          <p class="activity__company">Заказчик ООО «РН-Юганскнефтегаз», Подрядчик/покупатель Филиал ЗАО «Интертехэлектро»г.Сургут</p>
         </li>
       </ul>
       <a href="#" class="btn info__btn">Заполнить опросный лист</a>
@@ -195,6 +233,21 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+    $('.map__btn').click(function(e) {
+      e.stopPropagation();
+      $('.tabs__title').slideToggle();
+    });
+    $("body").click(function(){
+      $('.tabs__title').slideUp();
+    });
+  </script>
 </body>
 </html>
