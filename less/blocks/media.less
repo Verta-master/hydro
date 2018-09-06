@@ -224,6 +224,10 @@
     display: block;
     position: static;
     border: 0;
+    
+    .ui-tabs-active a::before {
+      background-image: url(../img/arrow-yellow.svg);
+    }
   }
   .tabs__name {
     margin-bottom: 15px;
@@ -815,9 +819,6 @@
       margin-top: -220px;
       padding-bottom: 5px;
     }
-  }
-  .tabs__field {
-    height: 480px;
   }
   .map__info {
     padding-top: 65px;
