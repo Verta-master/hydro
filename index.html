@@ -42,11 +42,11 @@
       <div class="wrapper">
         <p class="promo__title">Компания «Гидроинжиниринг»  ведет успешную деятельность с 15 декабря 2008 года</p>
         <a href="#" class="btn promo__btn">Заполнить опросный лист</a>
-        <a href="#" class="more" title="Далее"></a>
+        <a href="#map" class="more" title="Далее"></a>
       </div>
     </section>
     
-    <section class="map">
+    <section class="map" id="map">
       <div class="map__wrapper">
         <div class="tabs" id="tabs">
           <div class="map__info">
@@ -85,10 +85,10 @@
         </div>
         <a href="#" class="map__show">Показать на карте в отдельном окне</a>
       </div>
-      <a href="#" class="more" title="Далее"></a>
+      <a href="#company" class="more" title="Далее"></a>
     </section>
     
-    <section class="company">
+    <section class="company" id="company">
       <div class="wrapper">
         <p>Создавая нашу компанию, мы объединили многолетний опыт, накопленный в сфере проектирования, строительства и эксплуатации промышленных инженерных сооружений, и в сфере дистрибуции технологического оборудования</p>
         <figure class="company__img">
@@ -97,11 +97,11 @@
           <span>2008 - 2017</span>
         </figure>
         <p class="company__title">C 2008 года было поставлено оборудования на полтора миллиарда рублей!</p>
-        <a href="#" class="more" title="Далее"></a>
+        <a href="#clients" class="more" title="Далее"></a>
       </div>
     </section>
     
-    <section class="clients">
+    <section class="clients" id="clients">
       <img src="img/Bg2.jpg" alt="Наши клиенты и партнеры" class="clients__img" width="1440" height="560">
       <div class="wrapper">
         <p class="title-2">Наши клиенты и партнеры</p>
@@ -174,11 +174,11 @@
           <div class="swiper-button-next clients__next"></div>
         </div>
         <a href="#" class="btn clients__btn">Стать нашим клиентом</a>
-        <a href="#" class="more" title="Далее"></a>
+        <a href="#service" class="more" title="Далее"></a>
       </div>
     </section>
     
-    <section class="service">
+    <section class="service" id="service">
       <div class="wrapper">
         <div class="service__head">
           <p class="title-2">Наши услуги</p>
@@ -229,9 +229,9 @@
           </li>
         </ul>
         <a href="#" class="btn service__btn">Стать нашим клиентом</a>
-        <a href="#" class="more more--grey" title="Далее"></a>
+        <a href="#ready" class="more" title="Далее"></a>
         
-        <p class="title-2">Мы также готовы:</p>
+        <p class="title-2" id="ready">Мы также готовы:</p>
         <ul class="service__list service__list--center">
           <li class="service__item">
             <figure class="service__pic">
@@ -395,12 +395,24 @@
     $(function() {
       $("#tabs").tabs();
     });
-    $('.map__btn').click(function(e) {
-      e.stopPropagation();
-      $('.tabs__title').slideToggle();
-    });
-    $("body").click(function(){
-      $('.tabs__title').slideUp();
+    if (window.innerWidth < 1000) {
+      $('.map__btn').click(function(e) {
+        e.stopPropagation();
+        $('.tabs__title').slideToggle();
+      });
+      $("body").click(function(){
+        $('.tabs__title').slideUp();
+      });
+    };
+  </script>
+  
+  <!--  Scroll to arrow anchors-->
+  <script>
+    $(".more").on("click","a", function (evt) {
+      evt.preventDefault();
+      var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 500);
     });
   </script>
 </body>

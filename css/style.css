@@ -1831,6 +1831,9 @@ address {
     position: static;
     border: 0;
   }
+  .tabs__title .ui-tabs-active a::before {
+    background-image: url(../img/arrow-yellow.svg);
+  }
   .tabs__name {
     margin-bottom: 15px;
   }
@@ -2458,9 +2461,6 @@ address {
   .activity--contacts {
     margin-top: -220px;
     padding-bottom: 5px;
-  }
-  .tabs__field {
-    height: 480px;
   }
   .map__info {
     padding-top: 65px;
