@@ -241,13 +241,15 @@
     $(function() {
       $("#tabs").tabs();
     });
-    $('.map__btn').click(function(e) {
-      e.stopPropagation();
-      $('.tabs__title').slideToggle();
-    });
-    $("body").click(function(){
-      $('.tabs__title').slideUp();
-    });
+    if (window.innerWidth < 1000) {
+      $('.map__btn').click(function(e) {
+        e.stopPropagation();
+        $('.tabs__title').slideToggle();
+      });
+      $("body").click(function(){
+        $('.tabs__title').slideUp();
+      });
+    };
   </script>
 </body>
 </html>
