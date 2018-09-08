@@ -187,43 +187,43 @@
         <ul class="service__list">
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-person.svg" alt="Предоставление консультаций и технической информации" width="54" height="55">
+              <img src="img/icon-person.png" alt="Предоставление консультаций и технической информации" width="54" height="55">
             </figure>
             <p>Предоставление консультаций и технической информации по оборудованию любого производителя</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-wind.svg" alt="подбор насосного оборудования" width="54" height="54">
+              <img src="img/icon-wind.png" alt="подбор насосного оборудования" width="54" height="54">
             </figure>
             <p>Квалифицированный предварительный проедпроектный и окончательный подбор насосного оборудования соответствующего вашим потребностям, техническим требованиям, расчетам</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-woman.svg" alt="Консультации сотрудников" width="54" height="56">
+              <img src="img/icon-woman.png" alt="Консультации сотрудников" width="54" height="56">
             </figure>
             <p>Консультации сотрудников вашего предприятия по вопросам монтажа, эксплуатации и ремонта насосного оборудования</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-tools.svg" alt=">Разработка проектной документации" width="54" height="50">
+              <img src="img/icon-tools.png" alt=">Разработка проектной документации" width="54" height="50">
             </figure>
             <p>Разработка проектной документации стадии П, РП соответствующих разделов</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-comp.svg" alt="Разработка подробного технико-экономического обоснования" width="54" height="54">
+              <img src="img/icon-comp.png" alt="Разработка подробного технико-экономического обоснования" width="54" height="54">
             </figure>
             <p>Разработка подробного технико-экономического обоснования поставки и замены оборудования</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-head.svg" alt="Шефмонтажные и пусконаладочные работы" width="54" height="54">
+              <img src="img/icon-head.png" alt="Шефмонтажные и пусконаладочные работы" width="54" height="54">
             </figure>
             <p>Шефмонтажные и пусконаладочные работы</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-wave.svg" alt="Энергоаудит действующих систем" width="54" height="54">
+              <img src="img/icon-wave.png" alt="Энергоаудит действующих систем" width="54" height="54">
             </figure>
             <p>Энергоаудит действующих систем</p>
           </li>
@@ -235,19 +235,19 @@
         <ul class="service__list service__list--center">
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-label.svg" alt="наиболее выгодные цены, условия и сроки поставки" width="54" height="54">
+              <img src="img/icon-label.png" alt="наиболее выгодные цены, условия и сроки поставки" width="54" height="54">
             </figure>
             <p>Предложить наиболее выгодные цены, условия и сроки поставки. Рассмотреть варианты поставки в лизинг, в рассрочку, в кредит, в зачет</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-man.svg" alt="качественный индивидуальный подход" width="54" height="54">
+              <img src="img/icon-man.png" alt="качественный индивидуальный подход" width="54" height="54">
             </figure>
             <p>Гарантировать вам всегда качественный индивидуальный подход и всестороннюю помощь в решении инженерных задач.</p>
           </li>
           <li class="service__item">
             <figure class="service__pic">
-              <img src="img/icon-gear.svg" alt="сервисное обслуживание" width="54" height="54">
+              <img src="img/icon-gear.png" alt="сервисное обслуживание" width="54" height="54">
             </figure>
             <p>Поставить в короткие сроки запасные части и осуществить сервисное обслуживание</p>
           </li>
@@ -376,10 +376,13 @@
   <div style="display: none;" id="call" class="modal">
     <p class="title-2">Написать нам</p>
     <form action="#" method="post" class="modal__form">
-      <input type="text" class="modal__input" placeholder="Имя">
-      <input type="email" class="modal__input" placeholder="E-mail">
+      <input type="text" class="modal__input" placeholder="Имя*" required>
+      <input type="email" class="modal__input" placeholder="E-mail*" required>
       <textarea class="modal__text" placeholder="Сообщение"></textarea>
+      <input type="checkbox" id="check" class="modal__check">
+      <label for="check" class="modal__label">Я не робот</label>
       <button type="submit" class="btn modal__btn">Отправить</button>
+      <p class="modal__comment">Отправляя форму, я даю согласие на <a href="#">обработку персональных данных</a><br>* - Поля, обязательные для заполнения</p>
     </form>
   </div>
   
@@ -408,11 +411,11 @@
   
   <!--  Scroll to arrow anchors-->
   <script>
-    $(".more").on("click","a", function (evt) {
+    $(".more").click(function (evt) {
       evt.preventDefault();
-      var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 500);
+      var id  = $(this).attr('href');
+      var top = $(id).offset().top;
+      $("body,html").animate({scrollTop: top}, 400);
     });
   </script>
 </body>

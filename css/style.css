@@ -1060,13 +1060,6 @@ address {
 .service__point a {
   display: block;
 }
-.service__point a:hover .service__img img,
-.service__point a:active .service__img img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: ease-out 0.3s;
-  transition: ease-out 0.3s;
-}
 .service__point a:hover .service__title,
 .service__point a:active .service__title {
   text-decoration: underline;
@@ -1101,8 +1094,6 @@ address {
   max-width: none;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: ease-out 0.3s;
-  transition: ease-out 0.3s;
 }
 .footer {
   padding-top: 32px;
@@ -1409,6 +1400,53 @@ address {
   min-height: 150px;
   padding: 15px;
 }
+.modal__comment {
+  margin-bottom: 0;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+.modal__comment a {
+  text-decoration: underline;
+}
+.modal__comment a:hover,
+.modal__comment a:active {
+  text-decoration: none;
+}
+.modal__check {
+  display: none;
+}
+.modal__label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.modal__label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  border-radius: 2px;
+}
+.modal__label::after {
+  display: none;
+  content: "\2713";
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  font-size: 20px;
+  color: #ffb300;
+  font-weight: 700;
+}
+.modal__check:checked + .modal__label::after {
+  display: block;
+}
 .production {
   padding-top: 50px;
   padding-bottom: 48px;
@@ -1566,6 +1604,9 @@ address {
     width: 240px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .modal__btn {
+    width: 100%;
   }
   .service__item {
     max-width: 280px;
