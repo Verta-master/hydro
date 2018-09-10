@@ -403,7 +403,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 .footer {
   margin-top: auto;
@@ -564,15 +563,13 @@ address {
   height: auto;
 }
 .menu__wrap {
-  opacity: 0;
   position: absolute;
+  z-index: 100;
   top: 0;
-  right: -250px;
+  right: 0;
   width: 250px;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -587,8 +584,9 @@ address {
   transition: ease-out 0.3s;
 }
 .menu__wrap--show {
-  opacity: 1;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
