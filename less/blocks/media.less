@@ -2,8 +2,9 @@
   .wrapper {
     width: 100%;
   }
+  .promo__call,
   .btn {
-    width: 240px;
+    width: 272px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -140,6 +141,19 @@
       display: block;
     }
   }
+  .social {
+    display: flex;
+  }
+  .footer__menu,
+  .footer__bottom {
+    display: block;
+  }
+  .footer__btn {
+    display: inline-block;
+  }
+  .footer__mobile {
+    display: none;
+  }
 }
 
 //-----------------------------
@@ -165,7 +179,7 @@
     background-color: rgba(255,255,255,0);
   }
   .menu__item {
-    margin-left: 32px;
+    margin-left: 16px;
   }
   .menu__link {
     padding: 0;
@@ -180,9 +194,7 @@
     }
   }
   .header__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: nowrap;
   }
   .map {
     padding-top: 0;
@@ -493,6 +505,33 @@
     width: 160px;
     margin-left: 0;
   }
+  .footer .logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__bottom {
+    padding-bottom: 30px;
+  }
+  .promo__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .promo__btn {
+    margin-right: 32px;
+    margin-left: 0;
+  }
+  .promo__call {
+    margin: 0;
+  }
+  .header__phone {
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: @yellow;
+    width: auto;
+  }
 }
 
 //-----------------------------
@@ -504,7 +543,6 @@
     display: inline-block;
     color: #fff;
     border-color: #fff;
-    margin-left: 20px;
   }
   .company {
     padding-top: 140px;
@@ -568,7 +606,7 @@
   .social {
     position: absolute;
     padding-top: 0;
-    top: 140%;
+    top: 130%;
     right: 24px;
   }
   .social__item {
@@ -682,10 +720,6 @@
   }
   .service {
     padding-bottom: 0;
-  }
-  .footer {
-    padding-top: 55px;
-    padding-bottom: 20px;
   }
   .about {
     padding-top: 225px;
