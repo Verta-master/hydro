@@ -28,7 +28,7 @@
             <a href="production.html" class="menu__link">Производство</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link menu__link--active">Контакты</a>
+            <a href="contacts.html" class="menu__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -38,61 +38,123 @@
   </header>
   
   <main class="internal">
-    <section class="about about--contacts">
+    <section class="about about--article">
       <div class="wrapper">
         <nav class="breadcrumbs">
           <a href="#" class="breadcrumbs__link">Главная</a>
-          <span class="breadcrumbs__link">Контакты</span>
+          <span class="breadcrumbs__link">Опросный лист</span>
         </nav>
         
-        <h1 class="title">Контактная информация</h1>
-        <p class="about__info">Компания «Гидроинжиниринг» ведет успешную деятельность с 15 декабря 2008 года. Создавая нашу компанию, мы объединили многолетний опыт, накопленный в сфере проектирования, строительства и эксплуатации промышленных инженерных сооружений и в сфере дистрибуции технологического оборудования</p>
-        <div class="about__btns">
-          <a href="#" class="btn promo__btn">Заполнить опросный лист</a>
-          <a href="#" class="btn-call promo__call">Отправить запрос на оборудование</a>
-        </div>
+        <h1 class="title">Опросный лист на насосное оборудование</h1>
       </div>
     </section>
     
-    <section class="activity activity--contacts wrapper">
-      <div class="tabs" id="tabs">
-        <div class="map__info">
-          <ul class="tabs__selection">
-            <li class="tabs__point"><a href="#tabs-1">Офис</a></li>
-            <li class="tabs__point"><a href="#tabs-2">Склад</a></li>
-          </ul>
-        </div>
-        <div class="tabs__info" id="tabs-1">
-          <div class="tabs__map">
-            <!--  Map 1 is here    -->Map 1
+    <section class="article wrapper">
+      <div class="article__block article__block--form">
+        <form action="#" method="post" class="form">
+          <fieldset class="form__field">
+            <p class="form__title">Общая информация</p>
+            <label for="position" class="form__label">Позиция насоса по схеме, назначение</label>
+            <input type="text" id="position" class="form__input">
+            <label for="order" class="form__label">Заказчик<span>*</span></label>
+            <input type="text" id="order" class="form__input" required>
+            <label for="address" class="form__label">Адрес</label>
+            <input type="text" id="address" class="form__input">
+            <label for="responder" class="form__label">Ответственный сотрудник</label>
+            <input type="text" id="responder" class="form__input">
+            <label for="phone" class="form__label">Телефон / Факс<span>*</span></label>
+            <input type="tel" id="phone" class="form__input" required>
+            <label for="email" class="form__label">Электронная почта<span>*</span></label>
+            <input type="email" id="email" class="form__input" required>
+            <label for="object" class="form__label">Название объекта</label>
+            <input type="text" id="object" class="form__input">
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Система</p>
+            <label class="form__label">Требуемая подача</label>
+            <div class="form__wrap">
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="number" class="form__label">Общее число насосов</label>
+                <input type="text" id="number" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="pressure" class="form__label">Избыточное давление на всасывании (Бар)</label>
+                <input type="text" id="pressure" class="form__input">
+              </div>
+            </div>
+            <label for="nominal" class="form__label">Требуемое давление на нагнетании при номинальной подаче (Бар)</label>
+            <input type="text" id="nominal" class="form__input">
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Перекачиваемая среда (для обычной воды заполняется только температура):</p>
+            <label for="media" class="form__label">Название среды</label>
+            <input type="text" id="media" class="form__input">
+            <label for="formula" class="form__label">Химическая формула</label>
+            <input type="text" id="formula" class="form__input">
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="concentration" class="form__label">Концентрация (в процентах)</label>
+                <input type="text" id="concentration" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="temperature" class="form__label">Рабочая температура (в градусах Цельсия)</label>
+                <input type="text" id="temperature" class="form__input">
+              </div>
+            </div>
+            <label for="density" class="form__label">Плотность при рабочей температуре (кг/м3)</label>
+            <input type="text" id="density" class="form__input">
+            <label for="viscosity" class="form__label">Кинематическая вязкость при рабочей температуре   (мм2/с) или (сСт)</label>
+            <input type="text" id="viscosity" class="form__input">
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="inclusion" class="form__label">Содержание твердых включений  в % (по весу) </label>
+                <input type="text" id="inclusion" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="size" class="form__label">Размер твердых включения (мм)</label>
+                <input type="text" id="size" class="form__input">
+              </div>
+            </div>
+            <label for="liquid" class="form__label">Особенности жидкости(кристаллизация, выпадение осадка, загазованность)</label>
+            <textarea id="liquid" class="form__text"></textarea>
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Дополнительные требования к конструкции насосного агрегата.</p>
+            <label for="gost" class="form__label">Взрывозащищенное исполнение электродвигателя класс взрывоопасной зоны по ГОСТ Р 51330.9-99 или по АТЕХ</label>
+            <input type="text" id="gost" class="form__input">
+            <label for="category" class="form__label">Категория и группа взрывоопасной смеси по ГОСТ Р 51330.5-99 и ГОСТ Р 51330.11-99</label>
+            <textarea id="category" class="form__text"></textarea>
+            <label for="other" class="form__label">Другие требования</label>
+            <textarea id="other" class="form__text"></textarea>
+          </fieldset>
+
+          <div class="form__btns">
+            <a href="#" class="form__file">Сохранить в файл</a>
+            <button type="submit" class="btn form__btn">Отправить</button>
           </div>
-          <div class="tabs__address">
-            <a href="#" class="map__show">Показать на карте в отдельном окне</a>
-            <address>
-              Адрес:<br>г. Екатеринбург, ул. Машинная 29Б, оф. 422 (4 этаж)
-            </address>
-            <p>Телефон:<br><a href="tel:+73433101606">+7(343) 310-16-06</a>, <a href="tel:+73433177191">+7(343) 317-71-91(многоканальный)</a></p>
-            <p>Электронная почта:<br><a href="mailto:gydroi@yandex.ru" class="link">gydroi@yandex.ru</a></p>
-            <a href="#" class="info__link" download>Скачать карточку предприятия</a>
-            <a href="#" class="btn tabs__btn">Написать нам</a>
-          </div>
-        </div>
-        <div class="tabs__info" id="tabs-2">
-          <div class="tabs__map">
-            <!--  Map 2 is here    -->Map 2
-          </div>
-          <div class="tabs__address">
-            <a href="#" class="map__show">Показать на карте в отдельном окне</a>
-            <address>
-              Адрес склада
-            </address>
-          </div>
-        </div>
+        </form>
       </div>
-    </section>
-    
-    <section class="contacts wrapper">
-      <div class="contacts__block">
+      <div class="contacts__block contacts__block--form">
         <p class="contacts__title">Реквизиты</p>
         <p>Общество с ограниченной ответственностью «ГИДРОинжиниринг»
           <br><br>
@@ -107,18 +169,6 @@
           Телефон: +7(343) 310-16-06 (многоканальный)
           <br><br>
           Электропочта: <a href="mailto:gydroi@yandex.ru" class="link">gydroi@yandex.ru</a></p>
-      </div>
-      <div class="contacts__block">
-        <p class="contacts__title">Обратная связь</p>
-        <form action="#" method="post" class="contacts__form">
-          <label for="mail" class="contacts__label">Ваш E-mail</label>
-          <input type="email" name="mail" id="mail" class="contacts__input" placeholder="test@test.mail">
-          <label for="subject" class="contacts__label">Тема сообщения</label>
-          <input type="text" name="subject" id="subject" class="contacts__input" placeholder="Купить маслостанцию">
-          <label for="message" class="contacts__label">Текст сообщения</label>
-          <input type="text" name="message" id="message" class="contacts__message">
-          <button type="submit" class="btn contacts__btn">Отправить</button>
-        </form>
       </div>
     </section>
   </main>
@@ -221,14 +271,6 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
-
-  <!-- Tabs -->
-  <script>
-    $(function() {
-      $("#tabs").tabs();
-    });
-  </script>
 </body>
 </html>
