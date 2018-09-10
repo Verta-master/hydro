@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Гидроинжиниринг</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <a href="index.html" class="logo">
+        <img src="img/logo_white.svg" alt="Logo" width="293" height="41">
+      </a>
+      <nav class="menu">
+        <button type="button" class="menu__btn"><span class="visually-hidden">Menu</span></button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="about.html" class="menu__link">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="activity.html" class="menu__link">Сферы деятельности</a>
+          </li>
+          <li class="menu__item">
+            <a href="production.html" class="menu__link">Производство</a>
+          </li>
+          <li class="menu__item">
+            <a href="contacts.html" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+73433101606" class="header__phone">+7 (343) 310-16-06</a>
+      <a data-fancybox data-src="#call" href="javascript:;" class="btn-call header__call">Написать нам</a>
+    </div>
+  </header>
+  
+  <main class="internal">
+    <section class="about about--article">
+      <div class="wrapper">
+        <nav class="breadcrumbs">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__link">Опросный лист</span>
+        </nav>
+        
+        <h1 class="title">Опросный лист на насосное оборудование</h1>
+      </div>
+    </section>
+    
+    <section class="article wrapper">
+      <div class="article__block article__block--form">
+        <form action="#" method="post" class="form">
+          <fieldset class="form__field">
+            <p class="form__title">Общая информация</p>
+            <label for="position" class="form__label">Позиция насоса по схеме, назначение</label>
+            <input type="text" id="position" class="form__input">
+            <label for="order" class="form__label">Заказчик<span>*</span></label>
+            <input type="text" id="order" class="form__input" required>
+            <label for="address" class="form__label">Адрес</label>
+            <input type="text" id="address" class="form__input">
+            <label for="responder" class="form__label">Ответственный сотрудник</label>
+            <input type="text" id="responder" class="form__input">
+            <label for="phone" class="form__label">Телефон / Факс<span>*</span></label>
+            <input type="tel" id="phone" class="form__input" required>
+            <label for="email" class="form__label">Электронная почта<span>*</span></label>
+            <input type="email" id="email" class="form__input" required>
+            <label for="object" class="form__label">Название объекта</label>
+            <input type="text" id="object" class="form__input">
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Система</p>
+            <label class="form__label">Требуемая подача</label>
+            <div class="form__wrap">
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+              <div class="form__block">
+                <span class="form__info">Qмин.</span>
+                <input type="text" class="form__value">
+                <span class="form__info">[м3/ч]</span>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="number" class="form__label">Общее число насосов</label>
+                <input type="text" id="number" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="pressure" class="form__label">Избыточное давление на всасывании (Бар)</label>
+                <input type="text" id="pressure" class="form__input">
+              </div>
+            </div>
+            <label for="nominal" class="form__label">Требуемое давление на нагнетании при номинальной подаче (Бар)</label>
+            <input type="text" id="nominal" class="form__input">
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Перекачиваемая среда (для обычной воды заполняется только температура):</p>
+            <label for="media" class="form__label">Название среды</label>
+            <input type="text" id="media" class="form__input">
+            <label for="formula" class="form__label">Химическая формула</label>
+            <input type="text" id="formula" class="form__input">
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="concentration" class="form__label">Концентрация (в процентах)</label>
+                <input type="text" id="concentration" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="temperature" class="form__label">Рабочая температура (в градусах Цельсия)</label>
+                <input type="text" id="temperature" class="form__input">
+              </div>
+            </div>
+            <label for="density" class="form__label">Плотность при рабочей температуре (кг/м3)</label>
+            <input type="text" id="density" class="form__input">
+            <label for="viscosity" class="form__label">Кинематическая вязкость при рабочей температуре   (мм2/с) или (сСт)</label>
+            <input type="text" id="viscosity" class="form__input">
+            <div class="form__wrap">
+              <div class="form__set">
+                <label for="inclusion" class="form__label">Содержание твердых включений  в % (по весу) </label>
+                <input type="text" id="inclusion" class="form__input">
+              </div>
+              <div class="form__set">
+                <label for="size" class="form__label">Размер твердых включения (мм)</label>
+                <input type="text" id="size" class="form__input">
+              </div>
+            </div>
+            <label for="liquid" class="form__label">Особенности жидкости(кристаллизация, выпадение осадка, загазованность)</label>
+            <textarea id="liquid" class="form__text"></textarea>
+          </fieldset>
+
+          <fieldset class="form__field">
+            <p class="form__title">Дополнительные требования к конструкции насосного агрегата.</p>
+            <label for="gost" class="form__label">Взрывозащищенное исполнение электродвигателя класс взрывоопасной зоны по ГОСТ Р 51330.9-99 или по АТЕХ</label>
+            <input type="text" id="gost" class="form__input">
+            <label for="category" class="form__label">Категория и группа взрывоопасной смеси по ГОСТ Р 51330.5-99 и ГОСТ Р 51330.11-99</label>
+            <textarea id="category" class="form__text"></textarea>
+            <label for="other" class="form__label">Другие требования</label>
+            <textarea id="other" class="form__text"></textarea>
+          </fieldset>
+
+          <div class="form__btns">
+            <a href="#" class="form__file">Сохранить в файл</a>
+            <button type="submit" class="btn form__btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="contacts__block contacts__block--form">
+        <p class="contacts__title">Реквизиты</p>
+        <p>Общество с ограниченной ответственностью «ГИДРОинжиниринг»
+          <br><br>
+          ИНН 6670238747 КПП 667201001 ОГРН 1086670042612<br>
+          ОКПО 89889549<br>
+          Р/с 40702810522560001043 в АКБ «Абсолют Банк» (ПАО)<br>
+          в г. Екатеринбурге,<br>
+          БИК 046577921<br>
+          К/счет 30101810800000000921 в Уральском главном управлении Центрального банка Российской Федерации
+          <br><br>
+          Адрес: 620142, Россия, Екатеринбург, ул. Машинная, 29Б, оф. 422<br>
+          Телефон: +7(343) 310-16-06 (многоканальный)
+          <br><br>
+          Электропочта: <a href="mailto:gydroi@yandex.ru" class="link">gydroi@yandex.ru</a></p>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer__mobile">
+      <div class="wrapper">
+        <a data-fancybox data-src="#call" href="javascript:;" class="footer__btn-mobile">Написать нам</a>
+      </div>
+    </div>
+    <div class="wrapper footer__top">
+      <div class="logo">
+        <img src="img/logo_black.svg" alt="Logo" width="293" height="41">
+      </div>
+      <nav class="footer__menu">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="about.html" class="footer__link">О компании</a>
+          </li>
+          <li class="footer__item">
+            <a href="activity.html" class="footer__link">Сферы деятельности</a>
+          </li>
+          <li class="footer__item">
+            <a href="production.html" class="footer__link">Производство</a>
+          </li>
+          <li class="footer__item">
+            <a href="contacts.html" class="footer__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a data-fancybox data-src="#call" href="javascript:;" class="btn-call footer__btn">Написать нам</a>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M10.706 9.374v1.18h-.849v1.443h.85v4.289h1.744v-4.288h1.17s.11-.692.163-1.449h-1.327v-.987c0-.147.19-.345.378-.345h.95V7.714h-1.291c-1.83 0-1.788 1.445-1.788 1.66z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M16.091 9.363a3.299 3.299 0 0 1-.414.147 1.78 1.78 0 0 0 .373-.64.133.133 0 0 0-.046-.148.14.14 0 0 0-.156-.01c-.3.174-.625.3-.965.372a1.872 1.872 0 0 0-1.288-.513c-1.014 0-1.84.807-1.84 1.798 0 .078.005.156.015.233a4.745 4.745 0 0 1-3.233-1.676.14.14 0 0 0-.226.017 1.766 1.766 0 0 0 .188 2.07 1.577 1.577 0 0 1-.246-.108.141.141 0 0 0-.136 0 .135.135 0 0 0-.07.115v.024c0 .647.357 1.229.901 1.546a1.621 1.621 0 0 1-.14-.02.14.14 0 0 0-.13.043.133.133 0 0 0-.027.131c.201.615.72 1.067 1.348 1.205a3.312 3.312 0 0 1-2.13.463.139.139 0 0 0-.147.089.134.134 0 0 0 .056.16c.802.502 1.73.768 2.683.768 1.874 0 3.046-.864 3.699-1.588.814-.903 1.281-2.098 1.281-3.279 0-.05 0-.099-.002-.149a3.53 3.53 0 0 0 .823-.852.133.133 0 0 0-.009-.162.14.14 0 0 0-.162-.036z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill-rule="evenodd">
+                <path fill-rule="nonzero" d="M7.437 12.478l1.975.716.765 2.39c.049.152.241.209.369.107l1.1-.872a.336.336 0 0 1 .401-.01l1.986 1.4c.137.097.33.024.364-.136l1.455-6.8c.038-.176-.14-.322-.312-.257l-8.105 3.038c-.2.075-.198.35.002.424zm2.616.335l3.86-2.31c.07-.042.141.05.082.103l-3.186 2.878a.636.636 0 0 0-.205.384l-.108.781c-.015.104-.165.115-.195.014l-.417-1.425a.373.373 0 0 1 .17-.425z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper footer__wrap">
+        <div class="footer__block">
+          <p class="footer__title">Офис</p>
+          <address>г. Екатеринбург,<br>ул. Машинная 29б, оф.422 (4 этаж)</address>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Склад:</p>
+          <address>г. Екатеринбург,<br>ул. Цвиллинга, д. 7, здание №6</address>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Телефоны:</p>
+          <a href="tel:+73433101606" class="footer__phone">+7 (343) 310-16-06 / </a>
+          <a href="tel:+73433177191" class="footer__phone">+7 (343) 317-71-91</a>
+          <span>Мы вам перезвоним</span>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title">Электронная почта:</p>
+          <a href="mailto:info@hydroi.ru" class="footer__mail">info@hydroi.ru</a>
+          <a href="mailto:gydroi@yandex.ru" class="footer__mail">gydroi@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-2">Написать нам</p>
+    <form action="#" method="post" class="modal__form">
+      <input type="text" class="modal__input" placeholder="Имя">
+      <input type="email" class="modal__input" placeholder="E-mail">
+      <textarea class="modal__text" placeholder="Сообщение"></textarea>
+      <input type="checkbox" id="check" class="modal__check">
+      <label for="check" class="modal__label">Я не робот</label>
+      <button type="submit" class="btn modal__btn">Отправить</button>
+      <p class="modal__comment">Отправляя форму, я даю согласие на <a href="#">обработку персональных данных</a><br>* - Поля, обязательные для заполнения</p>
+    </form>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+</body>
+</html>

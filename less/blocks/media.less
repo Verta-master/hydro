@@ -43,6 +43,31 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .form__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+  }
+  .form__set {
+    width: 48%;
+  }
+  .contacts__block--form {
+    display: none;
+  }
+  .form__btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .form__btn {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .form__file {
+    margin: 0;
+  }
 }
 
 //-----------------------------
@@ -83,9 +108,6 @@
   }
   .info__btn {
     margin-left: 0;
-  }
-  .info__link--article {
-    display: block;
   }
   .about--article .info__btn {
     display: flex;
@@ -532,6 +554,11 @@
     color: @yellow;
     width: auto;
   }
+  .about__btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 //-----------------------------
@@ -799,7 +826,7 @@
     font-weight: 500;
   }
   .article__links {
-    margin-bottom: 75px;
+    margin-bottom: 32px;
   }
   .about--production {
     .about__info {
@@ -883,5 +910,80 @@
   }
   .contacts__title {
     margin-bottom: 35px;
+  }
+  .article__info {
+    width: 584px;
+  }
+  .article__aside {
+    display: block;
+    width: 176px;
+    padding-top: 20px;
+  }
+  .article__block--columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .article__img {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+      max-width: none;
+      object-fit: cover;
+    }
+  }
+  .article__link {
+    width: 296px;
+    height: 48px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(51,51,51,0.7);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(212,212,212,0.2);
+    background-image: url(../img/download.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left 16px center;
+    .transition();
+    
+    &::before {
+      display: none;
+    }
+    
+    &:hover,
+    &:active {
+      border-color: @yellow;
+      .transition();
+    }
+  }
+  .article .info__link {
+    margin-bottom: 16px;
+  }
+  .internal {
+    background-color: #fafafa;
+  }
+  .article__block--form {
+    padding: 48px;
+  }
+  .form__title {
+    font-size: 24px;
+  }
+  .form__label {
+    font-size: 12px;
+  }
+  .form__field {
+    margin-bottom: 48px;
   }
 }
