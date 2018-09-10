@@ -2,7 +2,6 @@
   display: none;
   .reset();
   list-style: none;
-//  display: flex;
   justify-content: flex-end;
   align-items: center;
   float: right;
@@ -11,6 +10,23 @@
   svg {
     fill: @blue;
     .transition();
+  }
+  
+  &--menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: none;
+    padding-top: 0;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 24px;
+    
+    .social__item {
+      margin-left: 0;
+    }
   }
 }
 
