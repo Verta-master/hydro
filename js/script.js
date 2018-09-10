@@ -1,12 +1,13 @@
 //Mobile menu
-$('.menu__btn').click(function() {
-  $('.menu').toggleClass('menu--opened');
-  $('.menu__list').slideToggle();
-})
+$('.menu__up').click(function() {
+  $(this).toggleClass('menu__up--down');
+  $('.menu__sublist').slideToggle();
+});
 
-//if (window.innerWidth < 766) {
-//  $('.menu__link').click(function() {
-//    $('.menu__list').slideToggle();
-//    $('.menu').removeClass('menu--opened');
-//  })
-//}
+$('.menu__btn').click(function() {
+  $('.menu__wrap').addClass('menu__wrap--show');
+});
+
+$('.menu__close').click(function() {
+  $('.menu__wrap').removeClass('menu__wrap--show');
+});
